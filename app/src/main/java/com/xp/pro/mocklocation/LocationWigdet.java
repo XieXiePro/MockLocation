@@ -177,4 +177,8 @@ public class LocationWigdet extends LinearLayout {
         tvLatitude.setText(location.getLatitude() + " °");
         tvLongitude.setText(location.getLongitude() + " °");
     }
+
+    public void setMangerLocationData(double lat, double lon) {
+        mockLocationManager.setLocationData(lat, lon);
+    }
 }

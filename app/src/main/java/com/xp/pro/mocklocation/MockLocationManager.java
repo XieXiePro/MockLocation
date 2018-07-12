@@ -22,10 +22,6 @@ import java.util.List;
  */
 public class MockLocationManager {
 
-    MockLocationManager() {
-
-    }
-
     /**
      * 位置管理器
      */
@@ -58,6 +54,10 @@ public class MockLocationManager {
      * 启动和停止模拟位置的标识
      */
     public boolean bRun = false;
+
+    public double latitude;
+
+    public double longitude;
 
 
     /**
@@ -175,16 +175,15 @@ public class MockLocationManager {
                         stopMockLocation();
                         continue;
                     }
-
                     try {
                         // 模拟位置（addTestProvider成功的前提下）
                         for (String providerStr : mockProviders) {
                             Location mockLocation = new Location(providerStr);
-                            mockLocation.setLatitude(22);   // 维度（度）
-                            mockLocation.setLongitude(113);  // 经度（度）
-                            mockLocation.setAltitude(30);    // 高程（米）
-                            mockLocation.setBearing(180);    // 方向（度）
-                            mockLocation.setSpeed(10);    //速度（米/秒）
+                            mockLocation.setLatitude(latitude);   // 维度（度）
+                            mockLocation.setLongitude(longitude);  // 经度（度）
+//                            mockLocation.setAltitude(30);    // 高程（米）
+//                            mockLocation.setBearing(180);    // 方向（度）
+//                            mockLocation.setSpeed(10);    //速度（米/秒）
                             mockLocation.setAccuracy(0.1f);   // 精度（米）
                             mockLocation.setTime(new Date().getTime());   // 本地时间
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
@@ -205,7 +204,13 @@ public class MockLocationManager {
         }
     }
 
+
     public void startThread() {
         new Thread(new RunnableMockLocation()).start();
+    }
+
+    public void setLocationData(double lat, double lon) {
+        latitude = lat;
+        longitude = lon;
     }
 }
