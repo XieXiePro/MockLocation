@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        idLocationWigdet.setMangerLocationData(25, 223);
+        idLocationWigdet.setMangerLocationData(25, 113);
         idLocationWigdet.startMockLocation();
     }
 

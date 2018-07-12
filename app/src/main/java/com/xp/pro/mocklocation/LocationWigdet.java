@@ -171,6 +171,11 @@ public class LocationWigdet extends LinearLayout {
         }
     };
 
+    /**
+     * 获取到模拟定位信息，并显示
+     *
+     * @param location 定位信息
+     */
     private void setLocationData(Location location) {
         tvProvider.setText(location.getProvider());
         tvTime.setText(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(location.getTime())));
