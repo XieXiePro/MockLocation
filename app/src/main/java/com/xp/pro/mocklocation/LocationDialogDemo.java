@@ -1,5 +1,6 @@
 package com.xp.pro.mocklocation;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -39,6 +40,12 @@ public class LocationDialogDemo extends AppCompatActivity {
         LocationDialog.Builder builder = new LocationDialog.Builder(this);
         builder.setLatitude(mLocationBean.getLatitude());
         builder.setLongitude(mLocationBean.getLongitude());
+        builder.setPositiveButton("知道了", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
         builder.create().show();
     }
 }
