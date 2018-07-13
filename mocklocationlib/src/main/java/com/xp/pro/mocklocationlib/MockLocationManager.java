@@ -1,4 +1,4 @@
-package com.xp.pro.mocklocation;
+package com.xp.pro.mocklocationlib;
 
 import android.content.Context;
 import android.location.Criteria;

@@ -37,7 +37,7 @@
                 android:id="@+id/location_wigdet_tip_iv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/open_location_tip"
+                android:src="@drawable/open_location_tip"
                 android:visibility="gone" />
 
             <LinearLayout

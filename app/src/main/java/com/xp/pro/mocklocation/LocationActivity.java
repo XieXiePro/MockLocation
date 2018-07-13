@@ -3,14 +3,17 @@ package com.xp.pro.mocklocation;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.xp.pro.mocklocationlib.LocationBean;
+import com.xp.pro.mocklocationlib.LocationWidget;
+
 public class LocationActivity extends Activity {
-    LocationWigdet idLocationWigdet;
+    LocationWidget idLocationWidget;
     LocationBean mLocationBean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_location);
+        setContentView(R.layout.location_content_view);
         initMockLocationData();
         initView();
     }
@@ -32,31 +35,31 @@ public class LocationActivity extends Activity {
     }
 
     private void initView() {
-        idLocationWigdet = (LocationWigdet) findViewById(R.id.id_location_wigdet);
+        idLocationWidget = (LocationWidget) findViewById(R.id.id_location_wigdet);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        idLocationWigdet.setMangerLocationData(mLocationBean.getLatitude(), mLocationBean.getLongitude());
-        idLocationWigdet.startMockLocation();
+        idLocationWidget.setMangerLocationData(mLocationBean.getLatitude(), mLocationBean.getLongitude());
+        idLocationWidget.startMockLocation();
     }
 
     @Override
     protected void onPostResume() {
         super.onPostResume();
-        idLocationWigdet.refreshData();
+        idLocationWidget.refreshData();
     }
 
     @Override
     protected void onPause() {
-        idLocationWigdet.removeUpdates();
+        idLocationWidget.removeUpdates();
         super.onPause();
     }
 
     @Override
     protected void onDestroy() {
-        idLocationWigdet.stopMockLocation();
+        idLocationWidget.stopMockLocation();
         super.onDestroy();
     }
 }

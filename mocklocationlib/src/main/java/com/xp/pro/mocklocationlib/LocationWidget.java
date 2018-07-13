@@ -1,4 +1,4 @@
-package com.xp.pro.mocklocation;
+package com.xp.pro.mocklocationlib;
 
 import android.Manifest;
 import android.content.Context;
@@ -27,7 +27,7 @@ import java.util.Date;
  * Email: xiexiepro@gmail.com
  * Blog: http://XieXiePro.github.io
  */
-public class LocationWigdet extends LinearLayout {
+public class LocationWidget extends LinearLayout {
     MockLocationManager mockLocationManager;
     private Context context;
     private TextView tvProvider = null;
@@ -41,19 +41,19 @@ public class LocationWigdet extends LinearLayout {
     private LinearLayout locationWigdetDataLl;
 
 
-    public LocationWigdet(Context context) {
+    public LocationWidget(Context context) {
         super(context);
         this.context = context;
         init(context);
     }
 
-    public LocationWigdet(Context context, @Nullable AttributeSet attrs) {
+    public LocationWidget(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         init(context);
     }
 
-    public LocationWigdet(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LocationWidget(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         init(context);

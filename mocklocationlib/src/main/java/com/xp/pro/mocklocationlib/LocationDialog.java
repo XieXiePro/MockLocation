@@ -1,4 +1,4 @@
-package com.xp.pro.mocklocation;
+package com.xp.pro.mocklocationlib;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -38,7 +38,7 @@ public class LocationDialog extends Dialog {
 
         private double longitude;
 
-        LocationWigdet idLocationWigdet;
+        LocationWidget idLocationWigdet;
 
         public Builder(Context context) {
             this.context = context;
@@ -62,8 +62,8 @@ public class LocationDialog extends Dialog {
 
         public LocationDialog create() {
             LocationDialog mLocationDialog = new LocationDialog(context);
-            View view = LayoutInflater.from(context).inflate(R.layout.activity_location, null);
-            idLocationWigdet = (LocationWigdet) view.findViewById(R.id.id_location_wigdet);
+            View view = LayoutInflater.from(context).inflate(R.layout.location_content_view, null);
+            idLocationWigdet = (LocationWidget) view.findViewById(R.id.id_location_wigdet);
             idLocationWigdet.setMangerLocationData(latitude, longitude);
             idLocationWigdet.startMockLocation();
             idLocationWigdet.refreshData();
