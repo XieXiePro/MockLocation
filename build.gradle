@@ -3,10 +3,13 @@
 buildscript {
     repositories {
         jcenter()
+<<<<<<< HEAD
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
+=======
+>>>>>>> e05f15b57a1b152899b64de567dd33fbcba45c18
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -19,10 +22,13 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+<<<<<<< HEAD
         maven {
             url 'https://maven.google.com/'
             name 'Google'
         }
+=======
+>>>>>>> e05f15b57a1b152899b64de567dd33fbcba45c18
     }
 }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Android 实现模拟地图定位功能
 
 ###  一、项目git地址：
@@ -180,3 +181,6 @@ MockLocationManager：模拟地址管理类
 参考链接：
 [1、【科普】GPS、Wifi等各种手机定位方式的含义及原理详解](https://bbs.feng.com/read-htm-tid-7709847.html)
 [2、Android 使用模拟位置（支持Android 6.0）](https://blog.csdn.net/doris_d/article/details/51384285)
+=======
+# MockLocation
+>>>>>>> e05f15b57a1b152899b64de567dd33fbcba45c18

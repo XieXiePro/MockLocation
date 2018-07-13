@@ -27,6 +27,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+<<<<<<< HEAD
 
     compile project(":mocklocationlib")
+=======
+>>>>>>> e05f15b57a1b152899b64de567dd33fbcba45c18
 }

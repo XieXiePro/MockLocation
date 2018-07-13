@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 include ':app', ':mocklocationlib'
+=======
+include ':app'
+>>>>>>> e05f15b57a1b152899b64de567dd33fbcba45c18
