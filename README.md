@@ -170,6 +170,7 @@ MockLocationManager：模拟地址管理类
 ### 四、使用模拟定位需先开启系统设置中的模拟位置：
 
 *   Android 6.0 以下：【开发者选项 -> 允许模拟位置】
+
 ![Android 6.0 以下：【开发者选项 -> 允许模拟位置】](https://upload-images.jianshu.io/upload_images/2783386-9e69fd0b4936dbf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 *   Android 6.0 及以上：【开发者选项 -> 选择模拟位置信息应用】
