@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * LocationDialog:
+ * LocationDialog: 模拟定位对话框交互控件
  * Author: xp
  * Date: 18/7/13 00:18
  * Email: xiexiepro@gmail.com

@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * MockLocationManager:
+ * MockLocationManager:模拟地址管理类
  * Author: xp
  * Date: 18/7/12 22:01
  * Email: xiexiepro@gmail.com
@@ -181,9 +181,6 @@ public class MockLocationManager {
                             Location mockLocation = new Location(providerStr);
                             mockLocation.setLatitude(latitude);   // 维度（度）
                             mockLocation.setLongitude(longitude);  // 经度（度）
-//                            mockLocation.setAltitude(30);    // 高程（米）
-//                            mockLocation.setBearing(180);    // 方向（度）
-//                            mockLocation.setSpeed(10);    //速度（米/秒）
                             mockLocation.setAccuracy(0.1f);   // 精度（米）
                             mockLocation.setTime(new Date().getTime());   // 本地时间
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
