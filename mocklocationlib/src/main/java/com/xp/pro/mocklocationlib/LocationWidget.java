@@ -1,14 +1,10 @@
 package com.xp.pro.mocklocationlib;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,13 +43,13 @@ public class LocationWidget extends LinearLayout {
         init(context);
     }
 
-    public LocationWidget(Context context, @Nullable AttributeSet attrs) {
+    public LocationWidget(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.context = context;
         init(context);
     }
 
-    public LocationWidget(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public LocationWidget(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.context = context;
         init(context);
@@ -131,16 +127,6 @@ public class LocationWidget extends LinearLayout {
             tvSystemMockPositionStatus.setText("未开启");
             locationWigdetTipIv.setVisibility(View.VISIBLE);
             locationWigdetDataLl.setVisibility(View.GONE);
-        }
-        // 注册位置服务，获取系统位置
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
         }
         mockLocationManager.locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
     }

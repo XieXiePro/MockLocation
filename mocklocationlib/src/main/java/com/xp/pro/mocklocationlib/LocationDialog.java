@@ -3,13 +3,9 @@ package com.xp.pro.mocklocationlib;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StyleRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
  * LocationDialog: 模拟定位对话框交互控件
@@ -25,11 +21,11 @@ public class LocationDialog extends Dialog {
         super(context);
     }
 
-    public LocationDialog(@NonNull Context context, @StyleRes int themeResId) {
+    public LocationDialog(Context context, int themeResId) {
         super(context, themeResId);
     }
 
-    public LocationDialog(@NonNull Context context, boolean cancelable, @Nullable OnCancelListener cancelListener) {
+    public LocationDialog( Context context, boolean cancelable, OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
     }
 

@@ -1,13 +1,13 @@
 package com.xp.pro.mocklocation;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.xp.pro.mocklocationlib.LocationBean;
 import com.xp.pro.mocklocationlib.LocationDialog;
 
-public class LocationDialogDemo extends AppCompatActivity {
+public class LocationDialogDemo extends Activity {
     LocationBean mLocationBean;
 
     @Override
