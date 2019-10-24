@@ -20,7 +20,5 @@ android {
 }
 
 dependencies {
-//    compile project(":mocklocationlib")
-    compile 'wgmf:imagepickerlib:1.0.0'
-    compile 'wgmf:mocklocationlib:1.0.0'
+    compile project(":mocklocationlib")
 }
